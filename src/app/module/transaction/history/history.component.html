@@ -1,0 +1,12 @@
+<div class="transaction-container">
+    <h3>Transaction History</h3>
+    <div class="grid-container">
+        <app-grid [gridData]="transactionHistoryList" [gridColumnDefinition]="gridColumns"
+            (getAction)="getAction($event)" [sorting]="sorting" [pageLinks]="pageLinks" [pagination]="pagination"
+            *ngIf="transactionHistoryList">
+        </app-grid>
+    </div>
+</div>
+<app-alert [alertObj]="api.alertConfig" *ngIf="api.alertConfig?.modalShow" (buttonAction)="modalAction($event)">
+</app-alert>
+<app-spinner [spinner]="spinner"></app-spinner>

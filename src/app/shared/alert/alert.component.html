@@ -1,0 +1,24 @@
+<div  class="modal"  [ngClass]="{'show fade': alertObj?.modalShow}">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title heading"></h4>
+      </div>
+      <div class="modal-body" *ngIf="alertObj?.message?.creditCardNumber">
+        <p class="text-align-center">{{alertObj?.message?.message }}</p>
+        <div >Card Number:  <strong>{{ alertObj?.message?.creditCardNumber}}</strong></div>
+        <div >Available Balance: <strong>{{ alertObj?.message?.creditCardLimit}}</strong></div>
+      </div>
+      <div class="modal-body text-align-center" *ngIf="!alertObj?.message?.creditCardNumber">
+          <p>{{alertObj?.message }}</p>
+      </div>
+      <div class="modal-footer">
+        <span *ngFor="let button of alertObj?.button">
+          <button type="button" mat-raised-button class="btn btn-primary border-none ing-theme-color"
+            (click)="btnAction(button.name)">{{button.name}}</button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

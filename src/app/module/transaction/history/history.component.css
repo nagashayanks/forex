@@ -1,0 +1,9 @@
+h3 {
+    padding: 1% 0;
+    color: #ff6200;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.transaction-container{
+    margin-top: 8%;
+}

@@ -1,0 +1,17 @@
+.mt{
+    margin-top: 6rem;
+}
+.card{
+  padding: 0;
+}
+.right{
+  float: right;
+}
+.headings{
+  font-weight: bold;
+  padding: 0px 3px;
+}
+
+.summary{
+  overflow-x: auto;
+}
